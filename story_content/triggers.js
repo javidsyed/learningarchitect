@@ -2,14 +2,20 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "5nXqVzExfZD":
+      case "63ZKJi275ml":
         Script1();
         break;
-      case "6qx2m4nLTMO":
+      case "6D7wImMac9e":
         Script2();
         break;
-      case "5k8jXAftCBC":
+      case "6GOnBcMZMMN":
         Script3();
+        break;
+      case "5VnCOv8xmIf":
+        Script4();
+        break;
+      case "6ebkTPE96DZ":
+        Script5();
         break;
   }
 }
@@ -34,32 +40,42 @@ var keydown = player.keydown;
 var keyup = player.keyup;
 window.Script1 = function()
 {
-  const target = object('6Cwv2fLGZrm');
-const duration = 2500;
+  player.once(() => {
+const target = object('6Cwv2fLGZrm');
+const duration = 6750;
 const easing = 'ease-out';
-const id = '5nfviLlFErH';
-const growAmount = 0.2;
-player.addForTriggers(
-id,
+const id = '6q3tw0MADS5';
+const pulseAmount = 0.07;
+const delay = 0;
+addToTimeline(
 target.animate(
-[ {scale: `${1 + growAmount}` } ]
+[ {scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' } ]
 ,
-  { fill: 'forwards', duration, easing }
-)
+  { fill: 'forwards', delay, duration, easing }
+), id
 );
+});
 }
 
 window.Script2 = function()
 {
-  const target = object('6F4D1OSLXj7');
+  const target = object('6qunKMDOYVU');
 const duration = 750;
 const easing = 'ease-out';
-const id = '6HWspBRHIOa';
-const growAmount = 0.2;
+const id = '5wqiYhzDaV8';
+const pulseAmount = 0.07;
 player.addForTriggers(
 id,
 target.animate(
-[ {scale: `${1 + growAmount}` } ]
+[ {scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' } ]
 ,
   { fill: 'forwards', duration, easing }
 )
@@ -67,6 +83,48 @@ target.animate(
 }
 
 window.Script3 = function()
+{
+  const target = object('6PXEs5G2bdt');
+const duration = 750;
+const easing = 'ease-out';
+const id = '6OpSs8cfneq';
+const pulseAmount = 0.07;
+player.addForTriggers(
+id,
+target.animate(
+[ {scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' } ]
+,
+  { fill: 'forwards', duration, easing }
+)
+);
+}
+
+window.Script4 = function()
+{
+  const target = object('6YYWwim8AJ2');
+const duration = 750;
+const easing = 'ease-out';
+const id = '5c4nVWfgeo3';
+const pulseAmount = 0.07;
+player.addForTriggers(
+id,
+target.animate(
+[ {scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' }, 
+{scale: `${1 + pulseAmount}` }, 
+{scale: '1' } ]
+,
+  { fill: 'forwards', duration, easing }
+)
+);
+}
+
+window.Script5 = function()
 {
   const target = object('6UXKNCW2KyC');
 const duration = 750;
